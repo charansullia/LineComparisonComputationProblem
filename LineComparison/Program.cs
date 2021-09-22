@@ -4,17 +4,18 @@ namespace LineComparison
 {
     class Program
     {
-        static void Main(string[] args)
+      public static void Main(string[] args)
         {
-            LineComparisonComputation Line1 = new LineComparisonComputation(8, 9, 6, 8);
+            LineComparisonComputation Line1=new LineComparisonComputation(8, 9, 6, 8);
             double Length1 = Line1.LineComputation();
             LineComparisonComputation Line2 = new LineComparisonComputation(8, 9, 6, 8);
             double Length2 = Line2.LineComputation();
-            if(Length1>Length2)
+            if(Length1.CompareTo(Length2)>0)
             {
                 Console.WriteLine("Line1 is greater than Line2");
             }
-            else if(Length1==Length2)
+            else if(Length1.CompareTo(Length2)==0)
+
             {
                 Console.WriteLine("Lines are equal");
             }
